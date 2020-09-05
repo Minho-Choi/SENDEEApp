@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		B4259FC42503B5EE008783A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4259FC32503B5EE008783A6 /* AppDelegate.swift */; };
 		B4259FC62503B5EE008783A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4259FC52503B5EE008783A6 /* SceneDelegate.swift */; };
-		B4259FC82503B5EE008783A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4259FC72503B5EE008783A6 /* ViewController.swift */; };
+		B4259FC82503B5EE008783A6 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4259FC72503B5EE008783A6 /* EmotionViewController.swift */; };
 		B4259FCB2503B5EE008783A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4259FC92503B5EE008783A6 /* Main.storyboard */; };
 		B4259FCD2503B5F0008783A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4259FCC2503B5F0008783A6 /* Assets.xcassets */; };
 		B4259FD02503B5F0008783A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4259FCE2503B5F0008783A6 /* LaunchScreen.storyboard */; };
+		B4259FD82503C672008783A6 /* EmotionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4259FD72503C672008783A6 /* EmotionBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4259FC02503B5EE008783A6 /* SENDEEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SENDEEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4259FC32503B5EE008783A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4259FC52503B5EE008783A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4259FC72503B5EE008783A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4259FC72503B5EE008783A6 /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 		B4259FCA2503B5EE008783A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4259FCC2503B5F0008783A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4259FCF2503B5F0008783A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4259FD12503B5F0008783A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4259FD72503C672008783A6 /* EmotionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				B4259FC32503B5EE008783A6 /* AppDelegate.swift */,
 				B4259FC52503B5EE008783A6 /* SceneDelegate.swift */,
-				B4259FC72503B5EE008783A6 /* ViewController.swift */,
+				B4259FC72503B5EE008783A6 /* EmotionViewController.swift */,
 				B4259FC92503B5EE008783A6 /* Main.storyboard */,
+				B4259FD72503C672008783A6 /* EmotionBarView.swift */,
 				B4259FCC2503B5F0008783A6 /* Assets.xcassets */,
 				B4259FCE2503B5F0008783A6 /* LaunchScreen.storyboard */,
 				B4259FD12503B5F0008783A6 /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4259FC82503B5EE008783A6 /* ViewController.swift in Sources */,
+				B4259FC82503B5EE008783A6 /* EmotionViewController.swift in Sources */,
 				B4259FC42503B5EE008783A6 /* AppDelegate.swift in Sources */,
+				B4259FD82503C672008783A6 /* EmotionBarView.swift in Sources */,
 				B4259FC62503B5EE008783A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
