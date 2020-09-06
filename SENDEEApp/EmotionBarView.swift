@@ -8,29 +8,9 @@
 
 import UIKit
 
-@IBDesignable
-
 class EmotionBarView: UIView {
     
-    
-    let data = [
-        miniData(time: 0, emo: "angry"),
-        miniData(time: 3, emo: "disgusted"),
-        miniData(time: 5, emo: "fearful"),
-        miniData(time: 6, emo: "happy"),
-        miniData(time: 9, emo: "neutral"),
-        miniData(time: 11, emo: "sad"),
-        miniData(time: 12, emo: "surprised")]
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    //self.bounds.width * CGFloat(datum.time / interval)
-    //self.bounds.width * CGFloat(1 - (datum.time / interval))
+    var data = [miniData]()
     
     override func draw(_ rect: CGRect) {
         let startedTime = data[0].time
@@ -40,22 +20,22 @@ class EmotionBarView: UIView {
         for index in 0..<data.count - 1{
             let graphRect = CGRect(x: rect.minX + rect.width * CGFloat(data[index].time) / CGFloat(interval), y: rect.minY, width: rect.width * CGFloat((data[index + 1].time - data[index].time)) / CGFloat(interval), height: rect.height)
             let path = UIBezierPath(rect: graphRect)
-            print(graphRect.minX)
-            print(graphRect.width)
             if data[index].emo == "angry" {
-                #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
+                #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1).setFill()
             } else if data[index].emo == "disgusted" {
-                #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setFill()
+                #colorLiteral(red: 0.4500938654, green: 0.9813225865, blue: 0.4743030667, alpha: 1).setFill()
             } else if data[index].emo == "fearful" {
-                #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).setFill()
+                #colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1).setFill()
             } else if data[index].emo == "happy" {
-                #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).setFill()
+                #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1).setFill()
             } else if data[index].emo == "sad" {
-                #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1).setFill()
+                #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1).setFill()
             } else if data[index].emo == "surprised" {
-                #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1).setFill()
+                #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1).setFill()
+            } else if data[index].emo == "neutral"{
+                #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1).setFill()
             } else {
-                #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
+                #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
             }
             path.close()
             path.fill()
@@ -64,7 +44,3 @@ class EmotionBarView: UIView {
 
 }
 
-struct miniData {
-    var time = Int()
-    var emo = String()
-}

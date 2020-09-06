@@ -9,66 +9,52 @@
 import UIKit
 
 class EmotionViewController: UIViewController {
-//
-//    lazy var todaysEmotion = DailyEmotion(day: Date, emoData: emotionArray)
-//
-//    var emotionArray = []
+    
+    let data = [
+        miniData(time: 0, emo: "angry"),
+        miniData(time: 2, emo: "disgusted"),
+        miniData(time: 3, emo: "fearful"),
+        miniData(time: 4, emo: ""),
+        miniData(time: 6, emo: "happy"),
+        miniData(time: 9, emo: "neutral"),
+        miniData(time: 11, emo: "sad"),
+        miniData(time: 11.5, emo: "happy"),
+        miniData(time: 12, emo: "surprised"),
+        miniData(time: 13, emo: ""),
+        miniData(time: 16, emo: "")]
+    
+    var emoData = User()
 
+    @IBAction func leftDateButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func rightDateButton(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var emotionNameLabel: UILabel!
+    @IBOutlet weak var emotionBarGraph: EmotionBarView!
+    @IBOutlet weak var barGraphStartLabel: UILabel!
+    @IBOutlet weak var barGraphEndLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        emoData.emoData = data
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        dateLabel.text = dateFormatter.string(from: Date())
+        emojiLabel.text = emoData.primeEmo.1
+        emotionNameLabel.text = emoData.primeEmo.0
+        emotionBarGraph.data = emoData.emoData
+        barGraphStartLabel.text = emoData.getFirstTimeAsString()
+        barGraphEndLabel.text = emoData.getLastTimeAsString()
+        
     }
 
 
 }
-
-
-//
-//struct DailyEmotion {
-//    var day: Date
-//    var emoData: [emoDatum]
-//    
-//    var stringDay: String {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//        dateFormatter.timeStyle = .none
-//        return dateFormatter.string(from: self.day)
-//    }
-//    
-//    var firstTimeStartWatching: String {
-//        let timeFormatter = DateFormatter()
-//        timeFormatter.dateStyle = .none
-//        timeFormatter.timeStyle = .short
-//        if let firstTime = self.emoData.first?.recordedTime {
-//            return timeFormatter.string(from: firstTime)
-//        } else {
-//            return ""
-//        }
-//    }
-//    
-//    var lastTimeStartWatching: String {
-//        let timeFormatter = DateFormatter()
-//        timeFormatter.dateStyle = .none
-//        timeFormatter.timeStyle = .short
-//        if let lastTime = self.emoData.last?.recordedTime {
-//            return timeFormatter.string(from: lastTime)
-//        } else {
-//            return ""
-//        }
-//    }
-//}
-//
-//struct emoDatum {
-//    var recordedTime: Date
-//    var emotion: Emotion
-//}
-//
-//enum Emotion {
-//    case angry
-//    case disgusted
-//    case fearful
-//    case happy
-//    case neutral
-//    case sad
-//    case surprised
-//}
