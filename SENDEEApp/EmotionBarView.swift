@@ -11,6 +11,7 @@ import UIKit
 class EmotionBarView: UIView {
     
     var data = [miniData]()
+    var color = ColorPalette()
     
     override func draw(_ rect: CGRect) {
         let startedTime = data[0].time
@@ -21,19 +22,19 @@ class EmotionBarView: UIView {
             let graphRect = CGRect(x: rect.minX + rect.width * CGFloat(data[index].time) / CGFloat(interval), y: rect.minY, width: rect.width * CGFloat((data[index + 1].time - data[index].time)) / CGFloat(interval), height: rect.height)
             let path = UIBezierPath(rect: graphRect)
             if data[index].emo == "angry" {
-                #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1).setFill()
+                UIColor(cgColor: color.angerColor).setFill()
             } else if data[index].emo == "disgusted" {
-                #colorLiteral(red: 0.4500938654, green: 0.9813225865, blue: 0.4743030667, alpha: 1).setFill()
+                UIColor(cgColor: color.disgustColor).setFill()
             } else if data[index].emo == "fearful" {
-                #colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1).setFill()
+                UIColor(cgColor: color.fearColor).setFill()
             } else if data[index].emo == "happy" {
-                #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1).setFill()
+                UIColor(cgColor: color.happyColor).setFill()
             } else if data[index].emo == "sad" {
-                #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1).setFill()
+                UIColor(cgColor: color.sadColor).setFill()
             } else if data[index].emo == "surprised" {
-                #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1).setFill()
+                UIColor(cgColor: color.surprisedColor).setFill()
             } else if data[index].emo == "neutral"{
-                #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1).setFill()
+                UIColor(cgColor: color.neutralColor).setFill()
             } else {
                 #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
             }
@@ -44,3 +45,32 @@ class EmotionBarView: UIView {
 
 }
 
+class ColorPalette {
+    let angerColor = CGColor(srgbRed: 253/255, green: 127/255, blue: 124/255, alpha: 1)
+    let disgustColor = CGColor(srgbRed: 120/255, green: 248/255, blue: 127/255, alpha: 1)
+    let fearColor = CGColor(srgbRed: 123/255, green: 132/255, blue: 252/255, alpha: 1)
+    let happyColor = CGColor(srgbRed: 255/255, green: 250/255, blue: 129/255, alpha: 1)
+    let sadColor = CGColor(srgbRed: 122/255, green: 214/255, blue: 253/255, alpha: 1)
+    let surprisedColor = CGColor(srgbRed: 121/255, green: 251/255, blue: 214/255, alpha: 1)
+    let neutralColor = CGColor(srgbRed: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+    
+    func colorPick(emo: String) -> CGColor {
+        switch emo {
+        case "Anger" :
+            return angerColor
+        case "Disgust" :
+            return disgustColor
+        case "Fear" :
+            return fearColor
+        case "Happiness" :
+            return happyColor
+        case "Inexpressiveness" :
+            return neutralColor
+        case "Sadness" :
+            return sadColor
+        case "Surprise" :
+            return surprisedColor
+        default : return CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
+        }
+    }
+}

@@ -67,7 +67,7 @@ class User {
             emoString = "Happiness"
             emoji = "😁"
         case "4" :
-            emoString = "Inexpressive"
+            emoString = "Inexpressiveness"
             emoji = "😐"
         case "5" :
             emoString = "Sadness"

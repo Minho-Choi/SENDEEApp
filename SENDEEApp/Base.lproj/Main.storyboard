@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="390" translatesAutoresizingMaskIntoConstraints="NO" id="HDm-tE-PiS">
-                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Wf-g6-cgb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                                        <rect key="frame" x="0.0" y="30" width="375" height="338"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-s1-Ic3">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="258.5"/>
@@ -85,17 +85,17 @@
                                                     <constraint firstAttribute="height" constant="45" id="zU0-mY-NCn"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-od-3Fo" userLabel="emoBar View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="280" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-od-3Fo" userLabel="emoBar View">
                                                 <rect key="frame" x="0.0" y="323.5" width="375" height="14.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-YW-VY1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mH-bE-AWO">
-                                                        <rect key="frame" x="312.5" y="0.0" width="62.5" height="14.5"/>
+                                                        <rect key="frame" x="327.5" y="0.0" width="47.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -108,7 +108,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="4Wf-g6-cgb" secondAttribute="bottom" constant="317" id="2ce-YK-VMp"/>
                                     <constraint firstItem="4Wf-g6-cgb" firstAttribute="leading" secondItem="HDm-tE-PiS" secondAttribute="leading" id="71w-RP-NfQ"/>
-                                    <constraint firstItem="4Wf-g6-cgb" firstAttribute="top" secondItem="HDm-tE-PiS" secondAttribute="top" id="7Xf-qI-DQ9"/>
+                                    <constraint firstItem="4Wf-g6-cgb" firstAttribute="top" secondItem="HDm-tE-PiS" secondAttribute="top" constant="30" id="7Xf-qI-DQ9"/>
                                     <constraint firstItem="4Wf-g6-cgb" firstAttribute="centerX" secondItem="HDm-tE-PiS" secondAttribute="centerX" id="PhV-Lx-Npc"/>
                                     <constraint firstAttribute="trailing" secondItem="4Wf-g6-cgb" secondAttribute="trailing" id="rYO-Gw-Ebc"/>
                                 </constraints>
@@ -119,7 +119,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HDm-tE-PiS" secondAttribute="trailing" id="LpV-Cv-bxE"/>
-                            <constraint firstItem="HDm-tE-PiS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="d6a-mQ-2qL"/>
+                            <constraint firstItem="HDm-tE-PiS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d6a-mQ-2qL"/>
                             <constraint firstItem="HDm-tE-PiS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t7K-Or-qJJ"/>
                             <constraint firstAttribute="bottom" secondItem="HDm-tE-PiS" secondAttribute="bottom" id="wlc-Kv-on5"/>
                         </constraints>
@@ -132,6 +132,7 @@
                         <outlet property="emojiLabel" destination="MiA-Y0-5x2" id="Fhj-1d-mgz"/>
                         <outlet property="emotionBarGraph" destination="7Y7-jp-mWC" id="oFB-Mc-bBg"/>
                         <outlet property="emotionNameLabel" destination="MKM-dg-y4w" id="h5r-6h-AQH"/>
+                        <outlet property="scrollView" destination="HDm-tE-PiS" id="ePt-Ll-OIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
